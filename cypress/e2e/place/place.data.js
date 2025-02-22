@@ -1,5 +1,5 @@
 export class PlaceData{
-   static get testData{
+   static get testData (){
 
 		return {
 			name: "Mumbai",
