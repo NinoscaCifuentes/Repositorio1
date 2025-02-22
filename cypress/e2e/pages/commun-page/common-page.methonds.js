@@ -29,4 +29,13 @@ export class CommonPageMethonds {
          expect(str).to.equal(message)
       })
    }
+   static generateRandomString(length= 10) {
+      let result = '';
+      const characters = 'abcdefghijklmnopqrstuvwxyz';
+      const charactersLength = characters.length;
+      for (let i = 0; i < length; i++) {
+         result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      }
+      return result;
+   }
 }
