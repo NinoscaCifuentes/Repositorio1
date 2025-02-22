@@ -4,7 +4,8 @@ export class CommonPageData {
  }
  static get testSuit(){
     return {
-       registrationAuthentication: 'Registro y Autenticación',
+       registration: 'Registro ',
+       Authentication:'Autenticación',
        catalog: 'Catálogo y Compras'
     }
  }

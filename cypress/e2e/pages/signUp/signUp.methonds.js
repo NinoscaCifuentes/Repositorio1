@@ -14,4 +14,7 @@ export class SignUpMethonds{
     static verifyThatUserWasAdded(){
       CommonPageMethonds.verificAlertMessage('Sign up successful.')
     }
+    static verifyThatUserWasNotAdded(){
+      CommonPageMethonds.verificAlertMessage('This user already exist.')
+    }
 }
