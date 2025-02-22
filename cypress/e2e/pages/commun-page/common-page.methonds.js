@@ -38,4 +38,7 @@ export class CommonPageMethonds {
       }
       return result;
    }
+   static verificUserLogin(userName){
+       CommonPageElement.loggedInUser.welcome.should('have.text', 'Welcome '+userName)
+   }
 }

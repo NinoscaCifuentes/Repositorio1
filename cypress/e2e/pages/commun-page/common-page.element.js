@@ -24,4 +24,11 @@ export class CommonPageElement {
    }
      }
   }
+  static get loggedInUser(){
+      return {
+         get welcome (){
+            return  cy.get('a#nameofuser')
+         }
+      }
+  }
 }

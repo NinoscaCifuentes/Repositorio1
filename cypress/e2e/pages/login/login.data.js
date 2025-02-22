@@ -1,8 +1,8 @@
 export class LoginData{
-   static get dataInvalida(){
+   static get dataValida(){
         return {
-            userName: "XXXX",
-            password: "XXXX"
+            userName: "prueba98884",
+            password: "prueba98884"
         }
     }
 }
