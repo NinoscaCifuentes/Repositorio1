@@ -1,6 +1,6 @@
 import {LoginElement} from "./pages/login/login.element";
 import {LoginMethonds} from "./pages/login/login.methonds";
-import {HomeMethonds} from "./home/home.methonds";
+import {HomeMethonds} from "./pages/home/home.methonds";
 import {Logger} from "./util/logger";
 
 describe('template spec', () => {

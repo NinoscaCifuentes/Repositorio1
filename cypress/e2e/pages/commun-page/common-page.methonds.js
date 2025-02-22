@@ -24,4 +24,9 @@ export class CommonPageMethonds {
    static clickSingUpOptions(){
       CommonPageElement.topMenu.singUp.click()
    }
+   static verificAlertMessage(message){
+      cy.on('window:alert', (str) => {
+         expect(str).to.equal(message)
+      })
+   }
 }
