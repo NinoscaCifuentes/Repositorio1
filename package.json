@@ -4,7 +4,7 @@
   "description": "Repositorio de pruebas",
   "main": "index.js",
   "scripts": {
-    "limpiar-reporte":"rm -rf ./allure-report && rm -rf ./allure-results",
+    "limpiar-reporte": "rm -rf ./allure-report && rm -rf ./allure-results",
     "ejecutar-pruebas": "cypress run --headed —env allure=true",
     "generar-reporte": "allure generate allure-results -o allure-report",
     "abrir-reporte": "allure open",
