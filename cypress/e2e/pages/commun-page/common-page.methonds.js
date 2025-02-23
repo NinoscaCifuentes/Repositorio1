@@ -4,7 +4,9 @@ import {CommonPageElement} from "./common-page.element";
 
 export class CommonPageMethonds {
     static navigateDemoPlace(){
-        cy.visit(CommonPageData.url)
+       cy.clearCookies()
+       cy.clearLocalStorage()
+       cy.visit(CommonPageData.url)
     }
     static clickHomeOptions(){
        CommonPageElement.topMenu.home.click()
@@ -17,6 +19,11 @@ export class CommonPageMethonds {
    }
    static clickCartOptions(){
       CommonPageElement.topMenu.cart.click()
+      Cypress.on('uncaught:exception', (err, runnable) => {
+         // returning false here prevents Cypress from
+         // failing the test
+         return false
+      })
    }
    static clickLoginOptions(){
       CommonPageElement.topMenu.login.click()

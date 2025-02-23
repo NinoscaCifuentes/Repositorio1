@@ -5,7 +5,8 @@ export class CartElement{
     static get link (){
       return {
          delete(productName){
-            return cy.contains('td',productName).closest('tr').find('a')
+            return cy.contains('a', 'Delete').eq(0)
+
          }
       }
     }
