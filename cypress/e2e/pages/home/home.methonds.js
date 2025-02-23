@@ -13,4 +13,7 @@ export class HomeMethonds{
    static clickOnProduct(product){
       HomeElements.productName(product).click()
    }
+   static verificProductName(productName){
+      HomeElements.productName(productName).should('be.visible')
+   }
 }
