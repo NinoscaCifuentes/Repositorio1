@@ -1,7 +1,7 @@
 export class ProductElement{
  static get button(){
     return {
-       get AddToCart (){
+       get addToCart (){
           return cy.contains('a', 'Add to cart')
        }
     }
