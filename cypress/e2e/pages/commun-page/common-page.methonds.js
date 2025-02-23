@@ -48,4 +48,11 @@ export class CommonPageMethonds {
    static verificUserLogin(userName){
        CommonPageElement.loggedInUser.welcome.should('have.text', 'Welcome '+userName)
    }
+   static logOut(){
+      cy.get ( 'body') . then ($body=> {
+         if ($body.find('#logout2').length > 0) {
+            CommonPageElement.topMenu.logout.click();
+         }
+      })
+}
 }

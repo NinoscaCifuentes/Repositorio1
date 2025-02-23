@@ -17,7 +17,7 @@ describe(CommonPageData.testSuit.Authentication,()=> {
      Logger.stepNumber(3)
      Logger.step('Ingresar un nombre de usuario y/o contraseña inválidos')
      LoginMethonds.insertUserName(LoginData.dataValida.userName)
-     LoginMethonds.insertPassword('mmmm')
+     LoginMethonds.insertPassword(LoginData.dataValida.password)
 
      Logger.stepNumber(4)
      Logger.step('Hacer clic en "Log in" para iniciar sesión.')
@@ -25,5 +25,8 @@ describe(CommonPageData.testSuit.Authentication,()=> {
 
      Logger.verification('Verificar que se muestra un mensaje de error indicando que el inicio de sesión ha fallado.')
      LoginMethonds.verificWrongPasswordMessage()
+      cy.wait(3000)
+     Logger.postCondition('cerrar sesion')
+     CommonPageMethonds.logOut()
   })
 })

@@ -21,7 +21,7 @@ export class CommonPageElement {
    },
    get singUp (){
       return cy.contains('a', 'Sign up')
-   }
+   },
      }
   }
   static get loggedInUser(){
